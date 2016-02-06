@@ -1,31 +1,21 @@
 require 'sinatra'
 require './lib/document'
-require 'sequel'
+require './config'
+require 'byebug'
 Tilt.register Tilt::ERBTemplate, 'html.erb'
-
-DB = Sequel.sqlite('documents.db')
-
-DB.create_table :items do
-  primary_key :id
-  String      :title
-  String      :tags
-  String      :description
-end
 
 get '/' do
   erb :new_document
 end
 
 get '/documents' do
-  @documents = []
-  4.times do
-    @documents  << Document.new({
-      title: 'Titulo',
-      tags: 'Tag1, Tag2',
-      description: 'Descripcion'
-    })
-  end
+  @documents = Document.all
   erb :documents
+end
+
+get '/documents/:id' do
+  @document = Document.find({id: params[:id]})
+  erb :document
 end
 
 post '/create_document' do

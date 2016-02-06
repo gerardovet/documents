@@ -5,3 +5,5 @@ gem 'sinatra'
 gem 'sqlite3'
 
 gem 'sequel'
+
+gem 'byebug'
