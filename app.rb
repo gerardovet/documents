@@ -1,7 +1,6 @@
 require 'sinatra'
 require './lib/document'
 require './config'
-require 'byebug'
 Tilt.register Tilt::ERBTemplate, 'html.erb'
 
 get '/' do
