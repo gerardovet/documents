@@ -14,7 +14,6 @@ end
 
 get '/documents/:id' do
   @document = Document.find({id: params[:id]})
-  byebug
   erb :document
 end
 
