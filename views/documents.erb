@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Documentos</title>
+  </head>
+  <body>
+    <h1>Documentos</h1>
+    <div>
+      Buscar: <input type="text" name="search" value="">
+    </div>
+    <% @documents.each do |document| %>
+    <p>
+      <strong>
+        <%= document.title %>
+      </strong>
+      <small><%= document.tags %></small>
+      <br />
+      <%= document.description %>
+    </p>
+    <% end %>
+  </body>
+</html>

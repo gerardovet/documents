@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nuevo Documento</title>
+  </head>
+  <body>
+    <h1>Nuevo Documento</h1>
+
+    <form method="POST" action="/create_document">
+      <p>
+        <label>TITULO:</label><br />
+        <input type="text" name="title" value="">
+      </p>
+      <p>
+        <label>Tags (CSV):</label><br />
+        <input type="text" name="tags" value="">
+      </p>
+      <p>
+        <label>Descripcion:</label><br />
+        <textarea name="description"></textarea>
+      </p>
+      <p>
+        <input type="submit" name="name" value="Crear">
+      </p>
+    </form>
+  </body>
+</html>

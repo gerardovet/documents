@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Documento</title>
+  </head>
+  <body>
+    <h1><%= @document.title %></h1>
+    <p>
+      <span><strong>Tags:</strong> <%= @document.tags.join(",") %></span>
+    </p>
+    <p>
+      <span><strong>Descripcion:</strong> <%= @document.description %></span>
+    </p>
+  </body>
+</html>
