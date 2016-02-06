@@ -10,12 +10,12 @@ class Document
 
   def self.all
     DB[:documents].all.map do |row|
-      Document.new row
+      new row
     end
   end
 
   def self.find(params={})
-    Document.new DB[:documents].where(id: params[:id]).first
+    new DB[:documents].where(id: params[:id]).first
   end
 
   def save
