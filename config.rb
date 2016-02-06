@@ -1,6 +1,6 @@
 require 'sequel'
 
-Sequel.connect(ENV['DATABASE_URL'])
+DB = Sequel.connect(ENV['DATABASE_URL'])
 
 DB.create_table? :documents do
   primary_key :id
